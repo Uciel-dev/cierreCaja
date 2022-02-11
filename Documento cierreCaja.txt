@@ -1,0 +1,14 @@
+			Cierre de Caja
+
+El sistema tiene como objetivo cerrar la caja diaria de facturacion del local.
+El problema a solucionar es dejar de usar excel, asi evitamos borrar las formulas y asi evirtar que el cierre sea defectuoso.
+
+Se crearan las siguientes vistas:
+
+- Carga de datos: Se ingresa el responsable de la caja y el turno de atencion y tambien se ingresan las cantidades de dinero en efectivo, 
+		  tarjetas, pago a proveedores, ticket sueldo, ticket cliente, fondo de caja y el total facturado por sistema.
+
+- Muestra de datos: En esta vista se vera la resta entre el total facturado por sistema y el total facturado por caja, dando como resulado el
+		    cierre de caja, tambien en dicha vista se podra visualiza los datos de quien es el resposable.
+
+- Modificar datos: En caso de que en la carga haya un error se podra modificar, sera un boton que esta presente en la vista de Muestra de datos.
