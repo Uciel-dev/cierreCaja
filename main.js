@@ -24,6 +24,8 @@ function getAllData () {
 
     const $userName = document.querySelector('#user-name').value;
     const $turn = document.querySelector('#turn').value;
+    const $observations = document.querySelector('#observations').value
+    const $debits = document.querySelector('#debits').value
 
     const $mil = document.querySelector('#mil').value;
     const $quinientos = document.querySelector('#quinientos').value;
@@ -43,7 +45,9 @@ function getAllData () {
         
         'userName' : $userName,
         'turn' : $turn,
-        'date' : formattingDate()
+        'date' : formattingDate(),
+        'observations': $observations,
+        'debits': $debits
     }
 
 
@@ -88,7 +92,6 @@ function formattingDate(){
 
 function multiplyingAmountsOfMoney( amountOfMoney ){
 
-
     amountOfMoney.mil *= 1000;
     amountOfMoney.quinientos *= 500;
     amountOfMoney.doscientos *= 200;
@@ -101,7 +104,7 @@ function multiplyingAmountsOfMoney( amountOfMoney ){
 
 function totalSalePerBox( amountOfMoney ){
     
-    let totalSale = 0;
+    let totalSale = 0
 
     for(const money in amountOfMoney){
     
@@ -109,7 +112,7 @@ function totalSalePerBox( amountOfMoney ){
     
     }
 
-
+    return totalSale
 }
 
 function showDataOfThePersonInCharge(userData){
@@ -117,8 +120,12 @@ function showDataOfThePersonInCharge(userData){
     const $responsableText = document.createTextNode(`Responsable: ${userData.userName}`)
     const $turnText = document.createTextNode(`Turno: ${userData.turn}`)
     const $dateText = document.createTextNode(`Fecha: ${userData.date}`)
+    const $debitsText = document.createTextNode(`Debitos: ${userData.debits}`)
+    const $observationsText = document.createTextNode(`Observaciones: ${userData.observations}`)
 
     document.querySelector('#show-responsible').appendChild($responsableText)
     document.querySelector('#show-turn').appendChild($turnText)
     document.querySelector('#show-date').appendChild($dateText)
+    document.querySelector('#show-debits').appendChild($debitsText)
+    document.querySelector('#show-observations').appendChild($observationsText)
 }
