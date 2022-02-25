@@ -8,14 +8,14 @@
         <title>Ranelagh Express</title>
     </head>
     <body>
-            <div name="" style="text-align:center ;">
+            <div style="text-align:center ;">
                 <h2>Cierre de caja</h2>
                 
                 <label for="">Responsable: </label>
-                <input type="text" placeholder="Abru">
+                <input type="text" id="user-name" placeholder="Uciel">
                 <br> 
                 <label for="">Turno: </label>
-                <input type="text"> 
+                <input id="turn" type="text" placeholder="Tarde"> 
                 <br>
                 
                 <h3>Ingrese la cantidad de billetes:</h3>
@@ -38,12 +38,16 @@
                     <input type="number" id="venta-total-sistema"  placeholder="Venta total por sistema"> <br> <br>
 
                     <button id="guardar" >Guardar</button>
-                    
+
+                    <h4 id="show-responsible"></h4>
+                    <h4 id="show-turn"></h4>                    
+                    <h4 id="show-date"></h4>                    
             </div>
             
 
     </body>
 
     <script src="main.js" ></script>
+
 
 </html>
